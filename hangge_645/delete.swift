@@ -1,17 +1,11 @@
 import UIKit
 
-class file: UIViewController {
+class delete: UIViewController {
     var db:SQLiteDB!
     
     
-    @IBAction func qingkong(sender: AnyObject) {
-        let sql = "delete from t_user"
-        let result = db.execute(sql)
-        print(result)
-    }
     
-
-
+    
     @IBOutlet weak var text: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,30 +14,26 @@ class file: UIViewController {
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20),address varchar(20),email varchar(20))")
         //如果有数据则加载
-         //initUser()
-    }
-    
-    @IBAction func xianshi(sender: AnyObject) {
-        selete()
+        //initUser()
     }
     
 
-
     
-    func selete(){
-        text.text=""
-        
-        let data = db.query("select * from t_user")
-        
-        for var x=0;x<data.count;x++
-        {
-            //获取最后一行数据显
-            let tuser = data[x]
-            text.text! += "用户名：" + String(tuser["uname"]!) + "\n" + " 手机：" + String(tuser["mobile"]!) + "\n" + "地址：" + String(tuser["address"]!) + "\n" + "邮箱：" + String(tuser["email"]!) + "\n"
-        }
+    @IBAction func shanchu(sender: AnyObject) {
+        del()
+    }
+    
+    
+    
+
+    func del(){
+        let a=text.text!
+        let sql = "delete from user where uname='\(a)'"
+        let result = db.execute(sql)
+        print(result)
         
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {
