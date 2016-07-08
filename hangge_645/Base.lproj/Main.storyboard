@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="55D-Ub-ZER">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,6 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hangge_645" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
@@ -40,24 +41,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbT-Dz-kwY">
-                                <rect key="frame" x="114" y="103" width="30" height="30"/>
+                                <rect key="frame" x="114" y="147" width="30" height="30"/>
                                 <state key="normal" title="保存">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="saveClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gE8-Pn-44c"/>
+                                    <segue destination="g3I-jD-VfX" kind="show" id="O9r-AG-rwB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izk-rX-JrG">
-                                <rect key="frame" x="114" y="185" width="30" height="30"/>
-                                <state key="normal" title="查看"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aft-vB-X4x">
+                                <rect key="frame" x="114" y="225" width="30" height="30"/>
+                                <state key="normal" title="返回"/>
                                 <connections>
-                                    <action selector="chak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Q3-0e-FDC"/>
-                                    <segue destination="kjw-LQ-Zqu" kind="show" id="8s8-Xi-JoV"/>
+                                    <segue destination="55D-Ub-ZER" kind="show" id="eoN-R6-0ml"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9696350775" green="0.99738934960000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -65,31 +66,37 @@
                         <outlet property="txtUname" destination="JRE-Hy-bjQ" id="oEu-Dh-5Ft"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="407"/>
+            <point key="canvasLocation" x="239" y="209"/>
         </scene>
         <!--File-->
-        <scene sceneID="MDB-xH-kBi">
+        <scene sceneID="RRA-0h-3yP">
             <objects>
-                <viewController id="kjw-LQ-Zqu" customClass="File" customModule="hangge_645" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g3I-jD-VfX" customClass="file" customModule="hangge_645" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tdW-KS-C3N"/>
-                        <viewControllerLayoutGuide type="bottom" id="s7u-hv-cge"/>
+                        <viewControllerLayoutGuide type="top" id="Nih-kO-V4l"/>
+                        <viewControllerLayoutGuide type="bottom" id="GZz-Sx-Eb0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Tzj-EA-t6C">
+                    <view key="view" contentMode="scaleToFill" id="bHl-dn-yFX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HO-Zv-RVs">
-                                <rect key="frame" x="120" y="417" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20b-Wj-QMX">
+                                <rect key="frame" x="136" y="359" width="30" height="64"/>
+                                <state key="normal" title="返回"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="iS1-Rq-yIZ"/>
+                                    <segue destination="55D-Ub-ZER" kind="show" id="vMD-ti-Je6"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pK6-8H-alT">
-                                <rect key="frame" x="20" y="28" width="266" height="176"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddf-Ow-Oag">
+                                <rect key="frame" x="136" y="28" width="30" height="30"/>
+                                <state key="normal" title="显示"/>
+                                <connections>
+                                    <action selector="xianshi:" destination="g3I-jD-VfX" eventType="touchUpInside" id="vIt-dL-hgG"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PcE-Zh-3oT">
+                                <rect key="frame" x="20" y="66" width="280" height="260"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -99,12 +106,51 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="ddddd" destination="pK6-8H-alT" id="PcH-My-fE9"/>
+                        <outlet property="text" destination="PcE-Zh-3oT" id="oiE-wC-sQ2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5e6-yX-U1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OE6-py-h5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="507" y="402"/>
+            <point key="canvasLocation" x="525" y="347"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="glr-A1-JdJ">
+            <objects>
+                <viewController id="55D-Ub-ZER" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ljg-C2-plS"/>
+                        <viewControllerLayoutGuide type="bottom" id="rpj-GS-QBR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ih4-sN-Z1q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mVn-C0-8An">
+                                <rect key="frame" x="145" y="67" width="30" height="30"/>
+                                <state key="normal" title="添加"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="33m-bd-Pt9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YV-Rm-slb">
+                                <rect key="frame" x="145" y="135" width="30" height="30"/>
+                                <state key="normal" title="查看"/>
+                                <connections>
+                                    <segue destination="g3I-jD-VfX" kind="show" id="1KY-wd-Vp6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bOJ-8i-iO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-273" y="347"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eoN-R6-0ml"/>
+        <segue reference="O9r-AG-rwB"/>
+    </inferredMetricsTieBreakers>
 </document>

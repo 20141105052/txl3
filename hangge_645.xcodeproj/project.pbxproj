@@ -19,6 +19,7 @@
 		5A7BD5CF1C0328B000C3F9CF /* SQLTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BD5CC1C0328B000C3F9CF /* SQLTable.swift */; };
 		5A7BD5D01C0328B000C3F9CF /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BD5CD1C0328B000C3F9CF /* String-Extras.swift */; };
 		5A7BD5D41C03295E00C3F9CF /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 5A7BD5D31C03295E00C3F9CF /* data.db */; };
+		DE86E4401D2C908700A05B7B /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE86E43F1D2C908700A05B7B /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		5A7BD5CC1C0328B000C3F9CF /* SQLTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLTable.swift; sourceTree = "<group>"; };
 		5A7BD5CD1C0328B000C3F9CF /* String-Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String-Extras.swift"; sourceTree = "<group>"; };
 		5A7BD5D31C03295E00C3F9CF /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.db; sourceTree = "<group>"; };
+		DE86E43F1D2C908700A05B7B /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				5A7BD59F1C03278D00C3F9CF /* LaunchScreen.storyboard */,
 				5A7BD5A21C03278D00C3F9CF /* Info.plist */,
 				5A7BD5C41C03280400C3F9CF /* hangge_645-Bridging-Header.h */,
+				DE86E43F1D2C908700A05B7B /* File.swift */,
 			);
 			path = hangge_645;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A7BD5D01C0328B000C3F9CF /* String-Extras.swift in Sources */,
+				DE86E4401D2C908700A05B7B /* File.swift in Sources */,
 				5A7BD5CE1C0328B000C3F9CF /* SQLiteDB.swift in Sources */,
 				5A7BD5CF1C0328B000C3F9CF /* SQLTable.swift in Sources */,
 				5A7BD5991C03278D00C3F9CF /* ViewController.swift in Sources */,

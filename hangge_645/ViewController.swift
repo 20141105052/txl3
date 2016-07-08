@@ -23,9 +23,6 @@ class ViewController: UIViewController {
         saveUser()
     }
    
-    @IBAction func chak(sender: AnyObject) {
-        chakanUser()
-    }
 
 
     
@@ -52,18 +49,7 @@ class ViewController: UIViewController {
         print(result)
     }
     
-    func chakanUser(){
-        let uname = self.txtUname.text!
-        let mobile = self.txtMobile.text!
-        let sql = "select *from t_user(uname,mobile) values('\(uname)','\(mobile)')"
-        print("sql: \(sql)")
 
-        let result = db.execute(sql)
-        print(result)
-        
-
-        
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
