@@ -5,7 +5,7 @@ class file: UIViewController {
     
     
     @IBAction func qingkong(sender: AnyObject) {
-        let sql = "delete from t_user"
+        let sql = "delete from guo"
         let result = db.execute(sql)
         print(result)
     }
@@ -18,7 +18,7 @@ class file: UIViewController {
         //获取数据库实例
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_user(uid integer primary key,uname varchar(20),mobile varchar(20),address varchar(20),email varchar(20))")
+        db.execute("create table if not exists guo(uid integer primary key,uname varchar(20),mobile varchar(20),address varchar(20),email varchar(20))")
         //如果有数据则加载
          //initUser()
     }
@@ -33,13 +33,13 @@ class file: UIViewController {
     func selete(){
         text.text=""
         
-        let data = db.query("select * from t_user")
+        let data = db.query("select * from guo")
         
         for var x=0;x<data.count;x++
         {
             //获取最后一行数据显
             let tuser = data[x]
-            text.text! += "用户名：" + String(tuser["uname"]!) + "\n" + " 手机：" + String(tuser["mobile"]!) + "\n" + "地址：" + String(tuser["address"]!) + "\n" + "邮箱：" + String(tuser["email"]!) + "\n"
+            text.text! += "用户名：" + String(tuser["uname"]!)  + " 手机：" + String(tuser["mobile"]!) + "地址：" + String(tuser["address"]!) + "邮箱：" + String(tuser["email"]!)
         }
         
     }
